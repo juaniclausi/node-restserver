@@ -1,0 +1,40 @@
+git config --global http.proxy http://username:password@host:port
+git config --global https.proxy http://username:password@host:port
+
+git init
+git status
+git add .
+git commit -m "Primer commit"
+git status
+
+Realizar el conexion y push del repositorio
+
+Crear un release
+
+git tag -a v0.0.1 -m "Beta - Inicio de proyecto"
+git tag
+git push --tags
+
+
+
+
+git remote        muestra ramas
+git remote -v     muestra ramas con su url
+
+
+
+set HTTP_PROXY=http://proxy01.aysa.ad:8080
+set HTTPS_PROXY=https://proxy01.aysa.ad:8080
+heroku login
+heroku create
+git push heroku master
+heroku open
+
+"start": "node server/server.js",
+
+git status
+git commit -am "npm start listo"
+git push heroku master
+
+user: juaniclausi
+pass: SIEZjJa2aIyXMcWZ
