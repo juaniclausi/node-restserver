@@ -54,7 +54,7 @@ app.post('/usuario', [verificaToken, verificaAdmin_Role], (req, res) => {
 
     usuario.save((err, usuarioDB) => {
         if (err) {
-            return res.status(400).json({
+            return res.status(500).json({
                 ok: false,
                 err
             });
@@ -100,9 +100,9 @@ app.delete('/usuario/:id', [verificaToken, verificaAdmin_Role], (req, res) => {
     Usuario.findByIdAndUpdate(id, cambiaEstado, { new: true }, (err, usuarioBorrado) => {
 
         if (err) {
-            return res.status(400).json({
+            return res.status(500).json({
                 ok: false,
-                err
+                err: 'Usuario no encontrado'
             });
         }
 
@@ -110,7 +110,7 @@ app.delete('/usuario/:id', [verificaToken, verificaAdmin_Role], (req, res) => {
             return res.status(400).json({
                 ok: false,
                 err: {
-                    message: 'Usuario no encontrado'
+                    message: 'Usuario no es administrador'
                 }
             });
         }
