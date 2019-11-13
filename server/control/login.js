@@ -55,7 +55,7 @@ app.post('/login', (req, res) => {
 
 // ==============================
 // Ojo con ésta línea
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 // ==============================
 
 
